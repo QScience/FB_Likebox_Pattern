@@ -5,7 +5,7 @@ info:
   title: FB Likebox (Just a test!)
   description: Modifies the values of FB Likebox for testing purposes
   author: QScience
-  category: Block
+  category: FB Likebox
   version: 1.0
   core: 7.x
   author_website: http://qlectives.eu/
@@ -17,3 +17,5 @@ actions:
       fb_likebox_width: 400
       fb_likebox_height: 800
       fb_likebox_colorscheme: 'dark'
+      module: fb_likebox
+      delta: 0
