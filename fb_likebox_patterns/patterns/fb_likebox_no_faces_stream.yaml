@@ -40,7 +40,7 @@ actions:
         name: fb_likebox_stream
         value: true
       -
-        name: fb_likebox_faces
+        name: fb_likebox_show_faces
         value: false
       -
         name: fb_likebox_scrolling
