@@ -2,7 +2,7 @@
 # QScience
 
 info:
-  title: FB Likebox without Stream and Faces
+  title: FB Likebox only with faces
   description: Places a simple version of FB Likebox in the first sidebar of the bartik theme.
   author: QScience
   category: Facebook Likebox
