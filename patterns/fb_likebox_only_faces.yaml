@@ -46,8 +46,7 @@ actions:
         value: no
       -
         name: fb_likebox_width
-        value: 330
+        value: 292
       -
         name: fb_likebox_height
-        value: 63
-
+        value: 330

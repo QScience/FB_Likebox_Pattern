@@ -43,7 +43,7 @@ actions:
         value: true
       -
         name: fb_likebox_scrolling
-        value: no
+        value: yes
       -
         name: fb_likebox_width
         value: 292
