@@ -23,17 +23,19 @@ function fb_likebox_patterns($data = NULL) {
   return $actions;
 }
 
+/**
+ * 
+ * Implements function to export the values of the form.
+ * In this case we do not use the patterns_api_extract_actions()
+ * function, and we return directly the array with the values
+ * reay to be fetched.
+ * 
+ * @param $args
+ * @param $result
+ */
 function fb_likebox_patterns_export_all_settings($args = NULL, &$result = NULL) {
 
-//Should I call the main hook here?
-//$info = taxonomy_patterns();
 $form_id = 'block_admin_configure';
-
-/*$menu = (array) $menu;
-
-$data = array('tag' => 'menu');
-$data = array_merge($data, $menu);
-$action = array(PATTERNS_CREATE => $data);*/
 
 $result = array();
 $result['tag'] = 'fb_likebox';
@@ -47,13 +49,7 @@ $result['fb_width'] = variable_get('fb_likebox_width', '292');
 $result['fb_height'] = variable_get('fb_likebox_height', '556');
 $action = array (PATTERNS_CREATE => $result);
 $out = array($action);
-//$result = array(PATTERNS_CREATE => $result);
-//We will need to pass some extra arguments with the module and the delta config
-// $args['module'] = 'fb_likebox';
-// $args['delta'] = 0;
-// // It is important to user array merge. Pushing is not enough
-//   $result = array_merge($result, patterns_api_extract_actions($form_id, $args, 'fb_likebox', PATTERNS_MODIFY));
-  return $out;
+return $out;
 }
 
 /**
