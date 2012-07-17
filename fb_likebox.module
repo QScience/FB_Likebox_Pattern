@@ -148,6 +148,25 @@ function fb_likebox_block_save($delta = '', $edit = array()) {
 }
 
 /**
+ * 
+ * Implements hook_patterns().
+ * 
+ * Declares the module able to handle patterns (http://drupal.org/project/patterns) 
+ * configurations.
+ * 
+ * @param $data
+ */
+function fb_likebox_patterns($data = NULL) {
+  $actions['fb_likebox'] = array(
+      PATTERNS_INFO   => t('Settings for Facebook Likebox module'),
+      PATTERNS_MODIFY => array('block_admin_configure'),
+  );
+
+  return $actions;
+
+}
+
+/**
  * Implements hook_patterns_directory().
  */
 function fb_likebox_patterns_directory() {
@@ -210,4 +229,3 @@ function _fb_likebox_validate_block_settings(&$form, $form_state) {
     form_set_error('fb_likebox_height', t('Height should be a number bigger than 0'));
   }
 }
-

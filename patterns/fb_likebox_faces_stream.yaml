@@ -2,10 +2,10 @@
 # QScience
 
 info:
-  title: FB Likebox with Faces and Stream
-  description: Places a FB Likebox in the content section of the bartik theme with Faces and Stream
+  title: FB Likebox with faces and stream (default configuration)
+  description: Places a FB Likebox in the content section of the bartik theme. Disables for other themes.
   author: QScience
-  category: Facebook Likebox
+  category: FB
   version: 1.0
   core: 7.x
   author_website: http://qlectives.eu/
@@ -17,7 +17,7 @@ actions:
       delta: 0
       status: 1
       weight: -6
-      #title: FB Like
+      title: <none>
       theme: content
       region: content # Redundant, but needed, for now.
       regions:
@@ -25,18 +25,30 @@ actions:
           bartik: content
 
 # Some of the settings.
-  - create:
+  - modify:
       tag: variables
       -
         name: fb_likebox_url
         value: http://www.facebook.com/wikisaber.es
       -
         name: fb_likebox_colorscheme
-        value: dark
+        value: light
+      -
+        name: fb_likebox_header
+        value: true
+      -
+        name: fb_likebox_stream
+        value: true
+      -
+        name: fb_likebox_faces
+        value: true
+      -
+        name: fb_likebox_scrolling
+        value: no
       -
         name: fb_likebox_width
-        value: 300
+        value: 292
       -
         name: fb_likebox_height
-        value: 200
+        value: 556
 
