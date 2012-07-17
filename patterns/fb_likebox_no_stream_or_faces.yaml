@@ -2,8 +2,8 @@
 # QScience
 
 info:
-  title: FB Likebox with faces and stream (default configuration)
-  description: Places a FB Likebox with the default configuration in the first sidebar of the bartik theme.
+  title: FB Likebox without Stream and Faces
+  description: Places a faces only version of FB Likebox in the first sidebar of the bartik theme.
   author: QScience
   category: Facebook Likebox
   version: 1.0
@@ -37,10 +37,10 @@ actions:
         value: true
       -
         name: fb_likebox_stream
-        value: true
+        value: false
       -
         name: fb_likebox_faces
-        value: true
+        value: fa.se
       -
         name: fb_likebox_scrolling
         value: no
@@ -49,5 +49,5 @@ actions:
         value: 292
       -
         name: fb_likebox_height
-        value: 556
+        value: 63
 
