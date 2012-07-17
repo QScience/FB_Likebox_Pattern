@@ -17,15 +17,15 @@ actions:
       delta: 0
       status: 1
       weight: -6
-      title: <none>
-      theme: content
-      region: content # Redundant, but needed, for now.
+      title: patatin
+      theme: bartik
+      region: sidebar-first # Redundant, but needed, for now.
       regions:
           seven: -1 # Disabled.
-          bartik: content
+          bartik: sidebar-first
 
 # Some of the settings.
-  - modify:
+  - create:
       tag: variables
       -
         name: fb_likebox_url
