@@ -8,6 +8,7 @@ info:
   category: Facebook Likebox
   version: 1.0
   core: 7.x
+  author_email: david.rozas@gmail.com
   author_website: http://qlectives.eu/
 
 actions:
@@ -24,7 +25,7 @@ actions:
           bartik: sidebar_first
 
 # Facebook Likebox specific settings.
-  - modify:
+  - create:
       tag: variables
       -
         name: fb_likebox_url

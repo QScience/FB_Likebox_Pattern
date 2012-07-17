@@ -8,6 +8,7 @@ info:
   category: Facebook Likebox
   version: 1.0
   core: 7.x
+  author_email: david.rozas@gmail.com
   author_website: http://qlectives.eu/
 
 actions:
@@ -40,7 +41,7 @@ actions:
         value: false
       -
         name: fb_likebox_faces
-        value: fa.se
+        value: false
       -
         name: fb_likebox_scrolling
         value: no
@@ -50,4 +51,3 @@ actions:
       -
         name: fb_likebox_height
         value: 63
-

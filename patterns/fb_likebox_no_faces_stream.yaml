@@ -41,7 +41,7 @@ actions:
         value: true
       -
         name: fb_likebox_faces
-        value: true
+        value: false
       -
         name: fb_likebox_scrolling
         value: yes
