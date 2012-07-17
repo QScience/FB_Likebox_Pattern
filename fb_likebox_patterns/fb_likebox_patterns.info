@@ -1,0 +1,5 @@
+name = Facebook Likebox Patterns
+description = Enables compatibility of Facebook Likebox with patterns module.
+core = 7.x
+files[] = fb_likebox_patterns.module
+dependencies[] = patterns_components
