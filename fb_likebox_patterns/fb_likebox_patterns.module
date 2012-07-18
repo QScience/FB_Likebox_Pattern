@@ -28,28 +28,36 @@ function fb_likebox_patterns($data = NULL) {
  * Implements function to export the values of the form.
  * In this case we do not use the patterns_api_extract_actions()
  * function, and we return directly the array with the values
- * reay to be fetched.
+ * ready to be fetched.
  *
  * @param $args
  * @param $result
  */
 function fb_likebox_patterns_export_all_settings($args = NULL, &$result = NULL) {
 
-$form_id = 'block_admin_configure';
+//$form_id = 'block_admin_configure';
 
 $result = array();
-$result['tag'] = 'fb_likebox';
-$result['fb_url'] = variable_get('fb_likebox_url', 'http://www.facebook.com/wikisaber.es');
-$result['fb_colorscheme'] = variable_get('fb_likebox_colorscheme', 'light');
-$result['fb_header'] = variable_get('fb_likebox_header', 'true');
-$result['fb_stream'] = variable_get('fb_likebox_stream', 'true');
-$result['fb_show_faces'] = variable_get('fb_likebox_show_faces', 'true');
-$result['fb_scrolling'] = variable_get('fb_likebox_scrolling', 'no');
-$result['fb_width'] = variable_get('fb_likebox_width', '292');
-$result['fb_height'] = variable_get('fb_likebox_height', '556');
-$action = array(PATTERNS_MODIFY => $result);
-$out = array($action);
-return $out;
+$pattern = patterns_api_add_info_section();
+//Not mandatory in our case, something like block might make sense anyway
+//$pattern = patterns_api_add_modules_section('block', $pattern, FALSE);
+
+//This just create the action label!. For the moment the assignation to the array
+//needs to be performed manually
+$pattern = patterns_api_add_section('actions', $patterns, FALSE);
+$vars['action'] = 'system';
+$vars['action']['tag'] = 'fb_likebox';
+$vars['action']['fb_url'] = variable_get('fb_likebox_url', 'http://www.facebook.com/wikisaber.es');
+$vars['action']['fb_colorscheme'] = variable_get('fb_likebox_colorscheme', 'light');
+$vars['action']['fb_header'] = variable_get('fb_likebox_header', 'true');
+$vars['action']['fb_stream'] = variable_get('fb_likebox_stream', 'true');
+$vars['action']['fb_show_faces'] = variable_get('fb_likebox_show_faces', 'true');
+$vars['action']['fb_scrolling'] = variable_get('fb_likebox_scrolling', 'no');
+$vars['action']['fb_width'] = variable_get('fb_likebox_width', '292');
+$vars['action']['fb_height'] = variable_get('fb_likebox_height', '556');
+
+
+return $pattern;
 }
 
 /**
